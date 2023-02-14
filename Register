@@ -6,15 +6,13 @@ public class Register {
     
     public void createAccount(User user){
         
-        User u1 = new User();
-        
         String inputUsername = JOptionPane.showInputDialog(null, "Digite seu username: ", "username");
         user.setUsername(inputUsername);
         JOptionPane.showMessageDialog(null, "Seu username foi cadastrado!");
         
         while(true){
-            u1.email = JOptionPane.showInputDialog("Digite seu email: ", "email@gmail.com");
-            if(u1.email.endsWith("@gmail.com")){
+            user.email = JOptionPane.showInputDialog("Digite seu email: ", "email@gmail.com");
+            if(user.email.endsWith("@gmail.com")){
                 JOptionPane.showMessageDialog(null, "Seu email foi cadastrado!");
                 break;
             }else{
@@ -23,7 +21,7 @@ public class Register {
         }
         
         String CPF = JOptionPane.showInputDialog(null, "Digite seu CPF: ", "XXX.XXX.XXX-XX");
-        u1.setCPF(CPF);
+        user.setCPF(CPF);
         JOptionPane.showMessageDialog(null, "Seu CPF foi cadastrado!");
         
         String inputPassword = JOptionPane.showInputDialog(null, "Crie uma senha: ", "************");
