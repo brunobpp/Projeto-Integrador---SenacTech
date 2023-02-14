@@ -4,8 +4,6 @@ import javax.swing.JOptionPane;
 public class Login {
     
     public void loginAccount(User user){
-    
-        User u1 = new User();
         
         while(true){
             String inputUsername = JOptionPane.showInputDialog(null, "Digite seu username: ");
