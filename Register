@@ -1,0 +1,34 @@
+package projetointegrador;
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+public class Register {
+    
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+        
+        User u1 = new User();
+        
+        u1.username = JOptionPane.showInputDialog(null, "Digite seu username: ", "username");
+        JOptionPane.showMessageDialog(null, "Seu username foi cadastrado!");
+        
+        while(true){
+            u1.email = JOptionPane.showInputDialog("Digite seu email: ", "email@gmail.com");
+            if(u1.email.endsWith("@gmail.com")){
+                JOptionPane.showMessageDialog(null, "Seu email foi cadastrado!");
+                break;
+            }else{
+                JOptionPane.showMessageDialog(null, "Seu email está com o formato incorreto o formato deve ser como o padrão a seguir 'username@gmail.com'");
+            }
+        }
+        
+        String CPF = JOptionPane.showInputDialog(null, "Digite seu CPF: ", "XXX.XXX.XXX-XX");
+        u1.setCPF(CPF);
+        JOptionPane.showMessageDialog(null, "Seu CPF foi cadastrado!");
+        
+        String password= JOptionPane.showInputDialog(null, "Crie uma senha: ", "************");
+        u1.setPassword(password);
+        JOptionPane.showMessageDialog(null, "Sua senha foi criada!");
+        JOptionPane.showMessageDialog(null, "Seu cadastro foi finalizado com sucesso!");
+    }
+}
