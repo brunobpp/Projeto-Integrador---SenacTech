@@ -1,0 +1,16 @@
+package projetointegrador;
+
+public class MainPI {
+    
+    public static void main(String[] args) {
+    
+    User user = new User();    
+        
+    Register reg = new Register();
+    Login log = new Login();
+    
+    reg.createAccount(user);
+    log.loginAccount(user);
+    
+    }
+}
