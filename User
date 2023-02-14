@@ -8,35 +8,35 @@ public class User {
     private String password;
     
     public void setUsername(String username){
-    this.username = username;
+        this.username = username;
     }
     
     public String getUsername(){
-    return this.username;
+        return this.username;
     }
     
     public void setEmail(String email){
-    this.email = email;
+        this.email = email;
     }
     
     public String getEmail(){
-    return this.email;
+        return this.email;
     }
     
     public void setCPF(String CPF){
-    this.CPF = CPF;
+        this.CPF = CPF;
     }
     
     public String getCPF(){
-    return this.CPF;
+        return this.CPF;
     }
     
     public void setPassword(String password){
-    this.password = password;
+        this.password = password;
     }
     
     public String getPassword(){
-    return this.password;
+        return this.password;
     }
     
 }
