@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Register {
     
-    public static void main(String[] args) {
-        Scanner read = new Scanner(System.in);
+    public void createAccount(User user){
         
         User u1 = new User();
         
-        u1.username = JOptionPane.showInputDialog(null, "Digite seu username: ", "username");
+        String inputUsername = JOptionPane.showInputDialog(null, "Digite seu username: ", "username");
+        user.setUsername(inputUsername);
         JOptionPane.showMessageDialog(null, "Seu username foi cadastrado!");
         
         while(true){
@@ -26,8 +26,8 @@ public class Register {
         u1.setCPF(CPF);
         JOptionPane.showMessageDialog(null, "Seu CPF foi cadastrado!");
         
-        String password= JOptionPane.showInputDialog(null, "Crie uma senha: ", "************");
-        u1.setPassword(password);
+        String inputPassword = JOptionPane.showInputDialog(null, "Crie uma senha: ", "************");
+        user.setPassword(inputPassword);
         JOptionPane.showMessageDialog(null, "Sua senha foi criada!");
         JOptionPane.showMessageDialog(null, "Seu cadastro foi finalizado com sucesso!");
     }
