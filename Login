@@ -3,18 +3,20 @@ import javax.swing.JOptionPane;
 
 public class Login {
     
-    public static void main(String[] args) {
+    public void loginAccount(User user){
+    
         User u1 = new User();
         
         while(true){
             String inputUsername = JOptionPane.showInputDialog(null, "Digite seu username: ");
             String inputPassword = JOptionPane.showInputDialog(null, "Digite sua senha: ");
-            if(u1.getUsername().equals(inputUsername) && u1.getPassword().equals(inputPassword)){
+            if(inputUsername.equals(user.getUsername()) && inputPassword.equals(user.getPassword())){
                 JOptionPane.showMessageDialog(null, "Login realizado com sucesso!");
                 break;
             }else{
                 JOptionPane.showMessageDialog(null, "Login invalido!");
             }
         }
+        JOptionPane.showMessageDialog(null, "O programa acabou!");
     }
 }
